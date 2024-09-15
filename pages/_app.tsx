@@ -1,3 +1,3 @@
-import { RootProvider } from "@app/providers/root-provider";
+import { RootProvider } from '@app/providers/root-provider'
 
-export default RootProvider;
+export default RootProvider

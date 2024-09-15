@@ -1,22 +1,10 @@
-"use client";
+import { Container, Typography } from '@mui/material'
+import { NextPage } from 'next'
 
-import { DarkMode, LightMode } from "@mui/icons-material";
-import { IconButton, Stack, Typography } from "@mui/material";
-import { useThemeMode } from "@shared/hooks/use-theme-mode";
-import { NextPage } from "next";
-
-const RootPage: NextPage = () => {
-  const { themeMode, toggleThemeMode } = useThemeMode();
-
+export const RootPage: NextPage = () => {
   return (
-    <Stack>
-      <Typography>this it root page</Typography>
-
-      <IconButton onClick={toggleThemeMode}>
-        {themeMode === "dark" ? <DarkMode /> : <LightMode />}
-      </IconButton>
-    </Stack>
-  );
-};
-
-export default RootPage;
+    <Container maxWidth="xl">
+      <Typography>this is root page</Typography>
+    </Container>
+  )
+}
