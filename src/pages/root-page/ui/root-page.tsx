@@ -1,10 +1,22 @@
-import { Container, Typography } from '@mui/material'
-import { NextPage } from 'next'
+import { RootLayout } from '@app/layouts/root-layout'
+import { DarkMode, LightMode } from '@mui/icons-material'
+import { Button, Container, IconButton } from '@mui/material'
+import { useThemeMode } from '@shared/hooks/use-theme-mode'
+import { NextPageWithLayout } from '@shared/types/next'
+import { ReactElement } from 'react'
 
-export const RootPage: NextPage = () => {
+const getLayout = (page: ReactElement) => <RootLayout>{page}</RootLayout>
+
+export const RootPage: NextPageWithLayout = () => {
+  const { themeMode, toggleThemeMode } = useThemeMode()
+
   return (
     <Container maxWidth="xl">
-      <Typography>this is root page</Typography>
+      <IconButton onClick={toggleThemeMode}>{themeMode === 'dark' ? <DarkMode /> : <LightMode />}</IconButton>
+
+      <Button variant="contained">click</Button>
     </Container>
   )
 }
+
+RootPage.getLayout = getLayout

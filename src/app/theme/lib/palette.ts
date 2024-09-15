@@ -5,13 +5,13 @@ export const palette = (themeMode: PaletteMode) => {
   const colors: PaletteOptions = {
     divider: grey[500],
     primary: {
-      contrastText: themeMode === 'dark' ? purple[400] : purple[600],
+      contrastText: themeMode === 'dark' ? grey[900] : grey[100],
       dark: purple[700],
       light: purple[300],
       main: purple[500],
     },
     secondary: {
-      contrastText: themeMode === 'dark' ? deepPurple[400] : deepPurple[600],
+      contrastText: themeMode === 'dark' ? grey[900] : grey[100],
       dark: deepPurple[700],
       light: deepPurple[300],
       main: deepPurple[500],

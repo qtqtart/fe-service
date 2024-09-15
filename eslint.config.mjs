@@ -27,9 +27,7 @@ export default config(
     plugins: {
       '@next/next': next,
       '@typescript-eslint': plugin,
-      //
       prettier,
-      //
       react,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
@@ -38,8 +36,8 @@ export default config(
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
-      //
       '@next/next/no-duplicate-head': 'off',
+      'no-unused-vars': 'off',
       'react/react-in-jsx-scope': 'off',
     },
     settings: {
